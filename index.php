@@ -6,7 +6,7 @@ class Movie {
     public $genre;
     public $year;
 
-    function __costruct($title, $genre, $year) {
+    function __construct($title, $genre, $year) {
         $this->title = $title;
         $this->genre = $genre;
         $this->year = $year;
@@ -22,9 +22,11 @@ class Movie {
     }
 }
 
-$giaccoMovie = new Movie("Giacco's film", 'Horror', 2000);
+$giaccoMovie1 = new Movie("Giacco's film", 'Horror', 2000);
+$giaccoMovie2 = new Movie("Il terrore", 'Comico', 2024);
 
-var_dump($giaccoMovie);
+var_dump($giaccoMovie1);
+var_dump($giaccoMovie2);
 
 ?>
 
