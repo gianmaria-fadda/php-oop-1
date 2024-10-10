@@ -6,7 +6,25 @@ class Movie {
     public $genre;
     public $year;
 
+    function __costruct($title, $genre, $year) {
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->year = $year;
+    }
+
+    public function myMovie($title) {
+        if (is_string($title) && strlen($title) > 0) {
+            $this->title = $title;
+        } 
+        else {
+            $this->title = null;
+        }
+    }
 }
+
+$giaccoMovie = new Movie("Giacco's film", 'Horror', 2000);
+
+var_dump($giaccoMovie);
 
 ?>
 
