@@ -7,17 +7,25 @@ class Movie {
     public $year;
 
     function __construct($title, $genre, $year) {
-        $this->title = $title;
+        $this->setTitle($title);
         $this->genre = $genre;
-        $this->year = $year;
+        $this->getYear($year);
     }
 
-    public function myMovie($title) {
+    public function setTitle($title) {
         if (is_string($title) && strlen($title) > 0) {
             $this->title = $title;
         } 
         else {
             $this->title = null;
+        }
+    }
+    public function getYear($year) {
+        if (is_numeric($year)) {
+            $this->year = $year;
+        } 
+        else {
+            $this->year = 'Not A Number!!!';
         }
     }
 }
